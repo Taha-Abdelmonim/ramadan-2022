@@ -1,0 +1,1014 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #191919;
+  color: white;
+  overflow-x: clip;
+  overflow-y: clip;
+}
+
+:root {
+  --main-color: #ffba08;
+  --main-r-color: #e85d04;
+  --transition: all 1s;
+  --width: 100px;
+  --height: 100px;
+}
+
+.bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./images/00.jpg");
+  z-index: -1;
+  background-size: 72%;
+  background-position: center center;
+}
+
+.bg2 {
+  position: fixed;
+  left: -380px;
+  top: -323px;
+  width: 166%;
+  opacity: 0.2;
+  height: 214%;
+  background: url(./images/14.png);
+  transform: rotate(647deg);
+  background-size: 100% 100%;
+  border-radius: 50%;
+  animation: rot1 50s ease-in-out infinite alternate;
+}
+
+@keyframes rot1 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  perspective: 5000px;
+  transform-style: preserve-3d;
+}
+
+.fanose {
+  display: grid;
+  place-content: center;
+  padding-top: 50px;
+  width: 300px;
+  height: 550px;
+  position: relative;
+  top: 44px;
+  left: 237px;
+  transform: scale(0.7);
+}
+
+.content {
+  transform-style: preserve-3d;
+  transform-origin: top center;
+  transform: rotateY(130deg);
+  position: relative;
+  width: 100px;
+  transition: var(--transition);
+}
+
+.rotate1 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+}
+
+.rotate1 div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.rotate1 div:not(:last-child)::after,
+.rotate1 div:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-120deg, #ba0c2f, #ffcd00, #b47500);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.rotate1 div:not(:last-child)::after {
+  width: 70%;
+  height: 70%;
+  background: url(./images/9.png), radial-gradient(var(--main-color), var(--main-r-color));
+  background-size: cover;
+  background-position: center;
+}
+
+.rotate1 div.rot1 {
+  transform: translateZ(23px) rotateX(32deg);
+}
+
+.rotate1 div.rot2 {
+  transform: rotateY(90deg) translateZ(23px) rotateX(30deg);
+}
+
+.rotate1 div.rot3 {
+  transform: translateZ(-24px) rotateX(-30deg) rotateY(180deg);
+}
+
+.rotate1 div.rot4 {
+  transform: rotateY(-90deg) translateZ(23px) rotateX(30deg);
+}
+
+.rotate1 div.rot5 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(var(--main-color), var(--main-r-color));
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateX(90deg) translateZ(-42px);
+}
+
+.rotate2 {
+  position: relative;
+  width: 98px;
+  height: 55px;
+  top: -21px;
+  left: -50px;
+  transform-style: preserve-3d;
+}
+
+.rotate2 div i {
+  color: #fc0;
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  transform: translate(-50%, -50%);
+}
+
+.rotate2 div {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(#c21500, #ffc500);
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.rotate2 div.rot1 {
+  transform: translateZ(23px) rotateX(-60deg);
+}
+
+.rotate2 div.rot2 {
+  transform: rotateY(-90deg) translateZ(-25px) rotateX(60deg);
+}
+
+.rotate2 div.rot3 {
+  transform: translateZ(-23px) rotateX(60deg);
+}
+
+.rotate2 div.rot4 {
+  transform: rotateY(90deg) translateZ(66px) rotateX(60deg);
+  left: auto;
+  right: 40px;
+}
+
+.rotate3 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  top: -49px;
+  left: -52px;
+  transform-style: preserve-3d;
+  /* transform: rotateY(255deg); */
+}
+
+.rotate3 div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.rotate3 div::after,
+.rotate3 div::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-120deg, #ba0c2f, #ffcd00, #b47500);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.rotate3 div::after {
+  width: 70%;
+  height: 70%;
+  background: url(./images/10.png), radial-gradient(var(--main-color), var(--main-r-color));
+  background-size: 50% 50%;
+  background-position: bottom;
+}
+
+.rotate3 div.rot1 {
+  transform: translateZ(50px) rotateX(30deg);
+}
+
+.rotate3 div.rot2 {
+  transform: translateZ(-50px) rotateX(-30deg);
+}
+
+.rotate3 div.rot3 {
+  transform: rotateY(90deg) translateZ(50px) rotateX(30deg);
+}
+
+.rotate3 div.rot4 {
+  transform: rotateY(90deg) translateZ(-50px) rotateX(-30deg);
+}
+
+.rotate4 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  top: -76px;
+  left: -150px;
+  transform-style: preserve-3d;
+}
+
+.rotate4 div i {
+  color: #fc0;
+  position: absolute;
+  left: 50%;
+  top: 44%;
+  transform: translate(-50%, -50%);
+}
+
+.rotate4 div {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: url("./images/11.png"), radial-gradient(#ff6600, #fff);
+  background-size: cover;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.rotate4 div.rot1 {
+  transform: translateZ(50px) rotateX(-30deg);
+}
+
+.rotate4 div.rot2 {
+  transform: rotateY(-90deg) translateZ(-49px) rotateX(30deg);
+}
+
+.rotate4 div.rot3 {
+  transform: translateZ(-50px) rotateX(30deg);
+}
+
+.rotate4 div.rot4 {
+  transform: rotateY(90deg) translateZ(91px) rotateX(30deg);
+  left: auto;
+  right: 40px;
+}
+
+.rotate5 {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+  top: -108px;
+  left: -28px;
+}
+
+.rotate5 div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.rotate5 div::after,
+.rotate5 div::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-120deg, #ba0c2f, #ffcd00, #b47500);
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.rotate5 div::after {
+  width: 70%;
+  height: 70%;
+  background: url(./images/12.png), radial-gradient(var(--main-color), var(--main-r-color));
+  background-size: 50%;
+  background-position: center;
+}
+
+.rotate5 div.rot1 {
+  transform: translateZ(30px) rotateX(32deg);
+}
+
+.rotate5 div.rot2 {
+  transform: rotateY(90deg) translateZ(37px) rotateX(30deg);
+}
+
+.rotate5 div.rot3 {
+  transform: translateZ(-37px) rotateX(-30deg) rotateY(180deg);
+}
+
+.rotate5 div.rot4 {
+  transform: rotateY(-90deg) translateZ(34px) rotateX(30deg);
+}
+
+.cone {
+  position: absolute;
+  top: 45%;
+  left: 28.2%;
+  transform-style: preserve-3d;
+}
+
+.cone2 {
+  position: absolute;
+  left: 34%;
+  top: 100%;
+  transform-style: preserve-3d;
+}
+
+.unit {
+  width: 130px;
+  height: 20px;
+  background: #ff0;
+  border-top: 3px solid #ff0062;
+  border-bottom: 3px solid #ff9100;
+  animation: lighting 0.2s infinite alternate;
+  transform-style: preserve-3d;
+}
+
+.unit2 {
+  width: 100px;
+  height: 30px;
+  background: #ff0;
+  border-top: 3px solid #ff8800;
+  border-bottom: 3px solid #ff4800;
+  animation: lighting 0.2s infinite alternate;
+  transform-style: preserve-3d;
+}
+
+.pos-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes lighting {
+  0% {
+    background: #ff0;
+  }
+  100% {
+    background: #f90;
+  }
+}
+
+.helal {
+  position: absolute;
+  top: 0;
+  width: 500px;
+  height: 0;
+  animation: height 2s ease-in-out forwards;
+}
+
+@keyframes height {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 650px;
+  }
+}
+
+.helal img {
+  width: 100%;
+  height: 100%;
+}
+
+.fanose-helal {
+  margin-top: 60px;
+  margin-left: 30px;
+}
+
+.pash-helal {
+  position: absolute;
+  top: -681px;
+  left: -65px;
+}
+
+.pash-helal svg {
+  stroke-dasharray: 1000000;
+  stroke-dashoffset: 1000000;
+  fill-opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: a1 500s 1 2s linear forwards;
+}
+
+.pash-helal svg .st0 {
+  fill: none;
+  stroke: url(#SVGID_1_);
+  stroke-width: 5;
+  stroke-miterlimit: 10;
+}
+
+.pash-helal svg .st0.open {
+  filter: drop-shadow(1px 1px 5px #8ff);
+  animation: a1 2000s 1 linear forwards;
+  stroke: #8ff;
+}
+
+@keyframes a1 {
+  0% {
+    stroke-dashoffset: 1000000;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill-opacity: 1;
+  }
+}
+
+.stars {
+  position: fixed;
+  top: 30px;
+  left: 28px;
+  z-index: -1;
+}
+
+.stars div {
+  position: absolute;
+  width: 5px;
+  height: 30px;
+  background-color: black;
+  top: -8.5%;
+  right: 3.3%;
+  z-index: -1;
+  opacity: 0;
+  animation: opacity 2s 3.1s ease-in-out forwards;
+}
+
+.stars div.open {
+  transition: 3s;
+  opacity: 1;
+}
+
+.stars div.open span::before, .stars div.open span, .stars div.open::after, .stars div.open::before, .stars div.open {
+  animation: lighting 0.2s infinite alternate;
+}
+
+.stars div::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  background-color: black;
+  top: 85.5%;
+  right: 120.3%;
+  transform: rotate(45deg);
+}
+
+.stars div::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  background-color: black;
+  top: 122.5%;
+  right: 105.3%;
+  transform: rotate(-45deg);
+}
+
+.stars div span {
+  position: absolute;
+  width: 4px;
+  height: 20px;
+  background-color: black;
+  top: 121.5%;
+  right: -121.7%;
+  z-index: -1;
+  transform: rotate(45deg);
+}
+
+.stars div span::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 20px;
+  background-color: black;
+  top: -36.5%;
+  right: 181.3%;
+  transform: rotate(90deg);
+}
+
+.stars .star1.open, .stars .star1.open::after, .stars .star1.open::before, .stars .star1.open span, .stars .star1.open span::before {
+  animation-delay: 5.2s;
+}
+
+.stars .star2 {
+  right: -97px;
+}
+
+.stars .star2.open, .stars .star2.open::after, .stars .star2.open::before, .stars .star2.open span, .stars .star2.open span::before {
+  animation-delay: 5.1s;
+}
+
+.stars .star3 {
+  right: -494px;
+}
+
+.stars .star3.open, .stars .star3.open::after, .stars .star3.open::before, .stars .star3.open span, .stars .star3.open span::before {
+  animation-delay: 1.7s;
+}
+
+.stars .star4 {
+  right: -579px;
+}
+
+.stars .star4.open, .stars .star4.open::after, .stars .star4.open::before, .stars .star4.open span, .stars .star4.open span::before {
+  animation-delay: 1.6s;
+}
+
+.stars .star5 {
+  right: -664px;
+}
+
+.stars .star5.open, .stars .star5.open::after, .stars .star5.open::before, .stars .star5.open span, .stars .star5.open span::before {
+  animation-delay: 1.5s;
+}
+
+.stars .star6 {
+  right: -761px;
+}
+
+.stars .star6.open, .stars .star6.open::after, .stars .star6.open::before, .stars .star6.open span, .stars .star6.open span::before {
+  animation-delay: 1.4s;
+}
+
+.stars .star7 {
+  right: -858px;
+}
+
+.stars .star7.open, .stars .star7.open::after, .stars .star7.open::before, .stars .star7.open span, .stars .star7.open span::before {
+  animation-delay: 1.3s;
+}
+
+.stars .star8 {
+  right: -964px;
+}
+
+.stars .star8.open, .stars .star8.open::after, .stars .star8.open::before, .stars .star8.open span, .stars .star8.open span::before {
+  animation-delay: 1.2s;
+}
+
+.stars .star9 {
+  right: -1051px;
+}
+
+.stars .star9.open, .stars .star9.open::after, .stars .star9.open::before, .stars .star9.open span, .stars .star9.open span::before {
+  animation-delay: 1s;
+}
+
+.stars .star10 {
+  right: -1145px;
+}
+
+.stars .star10.open, .stars .star10.open::after, .stars .star10.open::before, .stars .star10.open span, .stars .star10.open span::before {
+  animation-delay: .9s;
+}
+
+.stars .star11 {
+  right: -1231px;
+}
+
+.stars .star11.open, .stars .star11.open::after, .stars .star11.open::before, .stars .star11.open span, .stars .star11.open span::before {
+  animation-delay: .6s;
+}
+
+.stars .star12 {
+  right: -1314px;
+}
+
+.stars .star12.open, .stars .star12.open::after, .stars .star12.open::before, .stars .star12.open span, .stars .star12.open span::before {
+  animation-delay: .4s;
+}
+
+.stars .star13 {
+  right: -1394px;
+}
+
+.stars .star13.open, .stars .star13.open::after, .stars .star13.open::before, .stars .star13.open span, .stars .star13.open span::before {
+  animation-delay: .3s;
+}
+
+.stars .star14 {
+  right: -1486px;
+}
+
+.stars .star14.open, .stars .star14.open::after, .stars .star14.open::before, .stars .star14.open span, .stars .star14.open span::before {
+  animation-delay: .2s;
+}
+
+.stars .star15 {
+  right: -385px;
+}
+
+.stars .star15.open, .stars .star15.open::after, .stars .star15.open::before, .stars .star15.open span, .stars .star15.open span::before {
+  animation-delay: 3s;
+}
+
+.stars .star16 {
+  right: -190px;
+  top: 217px;
+}
+
+.stars .star16.open, .stars .star16.open::after, .stars .star16.open::before, .stars .star16.open span, .stars .star16.open span::before {
+  animation-delay: 3.2s;
+}
+
+.stars .star17 {
+  right: -483px;
+  top: 117px;
+}
+
+.stars .star17.open, .stars .star17.open::after, .stars .star17.open::before, .stars .star17.open span, .stars .star17.open span::before {
+  animation-delay: 2s;
+}
+
+.stars .star18 {
+  right: -352px;
+  top: 111px;
+}
+
+.stars .star18.open, .stars .star18.open::after, .stars .star18.open::before, .stars .star18.open span, .stars .star18.open span::before {
+  animation-delay: 2.9s;
+}
+
+.stars .star19 {
+  right: -548px;
+  top: 268px;
+}
+
+.stars .star19.open, .stars .star19.open::after, .stars .star19.open::before, .stars .star19.open span, .stars .star19.open span::before {
+  animation-delay: 2.2s;
+}
+
+.stars .star20 {
+  right: -292px;
+  top: 265px;
+}
+
+.stars .star20.open, .stars .star20.open::after, .stars .star20.open::before, .stars .star20.open span, .stars .star20.open span::before {
+  animation-delay: 2.8s;
+}
+
+.stars .star21 {
+  right: -368px;
+  top: 354px;
+}
+
+.stars .star21.open, .stars .star21.open::after, .stars .star21.open::before, .stars .star21.open span, .stars .star21.open span::before {
+  animation-delay: 2.7s;
+}
+
+.stars .star22 {
+  right: -464px;
+  top: 357px;
+}
+
+.stars .star22.open, .stars .star22.open::after, .stars .star22.open::before, .stars .star22.open span, .stars .star22.open span::before {
+  animation-delay: 2.3s;
+}
+
+.stars .star23 {
+  right: -321px;
+  top: 464px;
+  transform: rotate(182deg);
+}
+
+.stars .star23.open, .stars .star23.open::after, .stars .star23.open::before, .stars .star23.open span, .stars .star23.open span::before {
+  animation-delay: 2.6s;
+}
+
+.stars .star24 {
+  right: -514px;
+  top: 464px;
+  transform: rotate(182deg);
+}
+
+.stars .star24.open, .stars .star24.open::after, .stars .star24.open::before, .stars .star24.open span, .stars .star24.open span::before {
+  animation-delay: 2.4s;
+}
+
+.stars .star25 {
+  right: -556px;
+  top: 552px;
+}
+
+.stars .star25.open, .stars .star25.open::after, .stars .star25.open::before, .stars .star25.open span, .stars .star25.open span::before {
+  animation-delay: 3.6s;
+}
+
+.stars .star26 {
+  right: -10px;
+  top: 477px;
+}
+
+.stars .star26.open, .stars .star26.open::after, .stars .star26.open::before, .stars .star26.open span, .stars .star26.open span::before {
+  animation-delay: 4.1s;
+}
+
+.stars .star27 {
+  right: -259px;
+  top: 84px;
+}
+
+.stars .star27.open, .stars .star27.open::after, .stars .star27.open::before, .stars .star27.open span, .stars .star27.open span::before {
+  animation-delay: 3.1s;
+}
+
+.stars .star28 {
+  right: -222px;
+  top: 441px;
+  transform: rotate(-144deg);
+}
+
+.stars .star28.open, .stars .star28.open::after, .stars .star28.open::before, .stars .star28.open span, .stars .star28.open span::before {
+  animation-delay: 3.3s;
+}
+
+.stars .star29 {
+  right: -98px;
+  top: 583px;
+}
+
+.stars .star29.open, .stars .star29.open::after, .stars .star29.open::before, .stars .star29.open span, .stars .star29.open span::before {
+  animation-delay: 4s;
+}
+
+.stars .star30 {
+  right: -6px;
+  top: 154px;
+  transform: rotate(173deg);
+}
+
+.stars .star30.open, .stars .star30.open::after, .stars .star30.open::before, .stars .star30.open span, .stars .star30.open span::before {
+  animation-delay: 4.3s;
+}
+
+.stars .star31 {
+  right: -588px;
+  top: 338px;
+}
+
+.stars .star31::after, .stars .star31::before, .stars .star31 span, .stars .star31 span::before {
+  animation: lighting 0.2s infinite alternate;
+}
+
+@keyframes lighting {
+  0% {
+    background: #ff0;
+  }
+  100% {
+    background: #f90;
+  }
+}
+
+.btn2,
+.btn3,
+.btn1 {
+  padding: 10px 10px;
+  border-radius: 50%;
+  position: fixed;
+  top: 130px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 3px solid #8ff;
+  background: none;
+  color: #8ff;
+}
+
+.btn2:hover,
+.btn3:hover,
+.btn1:hover {
+  color: red;
+  transition: 3s;
+  cursor: pointer;
+  background: radial-gradient(#8ff, #008b8b);
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.btn2 {
+  top: -368px;
+  right: -233px;
+  position: relative;
+}
+
+.btn3 {
+  position: relative;
+  top: -142px;
+  right: -266px;
+}
+
+.spikes {
+  overflow-x: visible;
+  max-width: 100%;
+  background-color: var(--main-color);
+}
+
+.spikes::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  height: 30px;
+  z-index: 1;
+  background-image: linear-gradient(137deg, var(--main-color) 25%, transparent 25%), linear-gradient(225deg, var(--main-r-color) 25%, transparent 25%);
+  background-size: 30px 30px;
+  margin-top: 30px;
+  transform: scale(2);
+}
+
+.spikes1 {
+  position: relative;
+  top: -625px;
+  left: 0;
+  z-index: -1;
+  animation: ops2 1s ease-in-out infinite;
+}
+
+.spikes2 {
+  position: relative;
+  top: -543px;
+  left: 0;
+  z-index: -1;
+  animation: ops3 1s 2s ease-in-out infinite;
+}
+
+.spikes3 {
+  transition: 2s;
+  animation: ops4 1s 3s ease-in-out infinite;
+  position: relative;
+  top: -470px;
+  left: 0;
+  z-index: -1;
+}
+
+.spikes4 {
+  transition: 2s;
+  animation: ops5 1s 3s ease-in-out infinite;
+  position: relative;
+  top: -628px;
+  left: 82px;
+  z-index: 1;
+  transform: rotate(34deg);
+}
+
+.spikes5 {
+  transition: 2s;
+  animation: ops5 1s 5s ease-in-out infinite;
+  position: relative;
+  top: -732px;
+  left: 233px;
+  z-index: 1;
+  transform: rotate(-32deg);
+}
+
+@keyframes ops2 {
+  0% {
+    opacity: .5;
+  }
+  40% {
+    opacity: 1;
+  }
+  70% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ops3 {
+  0% {
+    opacity: .3;
+  }
+  50% {
+    opacity: .7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ops4 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .3;
+  }
+  100% {
+    opacity: .5;
+  }
+}
+
+@keyframes ops5 {
+  0% {
+    opacity: .1;
+  }
+  10% {
+    opacity: .5;
+  }
+  20% {
+    opacity: 1;
+  }
+  20% {
+    opacity: .2;
+  }
+  30% {
+    opacity: .7;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .3;
+  }
+  60% {
+    opacity: .7;
+  }
+  70% {
+    opacity: 1;
+  }
+  90% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.sorah {
+  position: absolute;
+  top: -25px;
+  left: 447px;
+  transform: scale(0.8);
+}
+
+.sorah img:first-child {
+  position: absolute;
+  left: 52px;
+  top: 168px;
+}
+
+.sorah img:last-child {
+  position: absolute;
+  top: 400px;
+  transform: scale(0.9);
+  left: 110px;
+}
+
+/*# sourceMappingURL=style.css.map */
